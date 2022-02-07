@@ -1,31 +1,3 @@
-// // *** Elements Selector
-
-// const productCounter = document.querySelectorAll(".productCounter");
-
-// productCounter.forEach(function (e) {
-//   const btnDown = e.children[0];
-//   const btnUp = e.children[2];
-
-//   btnDown.addEventListener("click", counterDown);
-//   btnUp.addEventListener("click", counterUp);
-// });
-
-// function counterDown(e) {
-//   let counterP = e.target.parentElement.nextElementSibling.textContent;
-//   let counter = counterP;
-//   counter > 0 ? counter-- : counter;
-//   e.target.parentElement.nextElementSibling.textContent = counter;
-// }
-// function counterUp(e) {
-//   // e.stopPropagation();
-//   console.log(e.currentTarget.className);
-//   let counterP = e.target.parentElement.previousElementSibling.textContent;
-//   let counter = counterP;
-//   if (e.target.parentElement.previousElementSibling.dataset.id === "at") return;
-//   counter++;
-
-//   e.target.parentElement.previousElementSibling.textContent = counter;
-// }
 //****DATA */
 const products = [
   {

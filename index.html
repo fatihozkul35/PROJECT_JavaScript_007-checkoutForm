@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Form</title>
+
+    <!--! CSS Styles -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!--! Bootstrap Styles -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!--! Font Awesome CDN -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <main>
+      <h1 class="text-center">Checkout Form</h1>
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-2">
+          <div class="formSide col order-sm-2 order-md-1">
+            <h3>Contact information</h3>
+            <form class="row g-3">
+              <div class="col-12">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="inputEmail"
+                  placeholder="Enter your email"
+                />
+              </div>
+              <div class="col-12">
+                <label for="inputPhone" class="form-label">Phone</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputPhone"
+                  placeholder="Enter your phone"
+                />
+              </div>
+              <br /><br /><br /><br /><br />
+              <h3>Shipping address</h3>
+              <div class="col-12">
+                <label for="inputFullName" class="form-label">Full name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputFullName"
+                  placeholder="Enter your Full name"
+                />
+              </div>
+              <div class="col-12">
+                <label for="inputAddress" class="form-label">Address</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputAddress"
+                  placeholder="Enter your address"
+                />
+              </div>
+              <div class="col-12">
+                <label for="inputCity" class="form-label">City</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputCity"
+                  placeholder="Enter your city"
+                />
+              </div>
+              <div class="col-3">
+                <label for="inputState" class="form-label">Country</label>
+                <select id="inputState" class="form-select">
+                  <option selected>Turkey</option>
+                  <option>Deutschland</option>
+                  <option>England</option>
+                  <option>Madagaskar</option>
+                  <option>Dominic</option>
+                </select>
+              </div>
+              <div class="col-9">
+                <label for="inputZip" class="form-label">Post Code</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputZip"
+                  placeholder="Enter your postal code"
+                />
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="gridCheck"
+                  />
+                  <label class="form-check-label" for="gridCheck">
+                    See this information next time
+                  </label>
+                </div>
+              </div>
+              <div class="col">
+                <button type="submit" class="btn btn-primary">Continue</button>
+              </div>
+            </form>
+          </div>
+          <div
+            class="productSide col order-sm-1 order-md-2 bg-secondary rounded-4"
+          ></div>
+        </div>
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+
+<!-- second Method -->
+<!-- <div class="row">
+              <div
+                class="productCard card d-flex flex-row border-0 gap-3 bg-secondary"
+                style="width: 18rem"
+              >
+                <img
+                  src="./assets/img/photo1.png"
+                  class="card-img-top"
+                  alt="here is a image"
+                />
+                <div
+                  class="card-body d-flex flex-column justify-content-between w-100"
+                >
+                  <div class="product" data-id="at">
+                    <h5>Vintage Backbag</h5>
+                    <strong>$54.99</strong>
+                    <span>$94.99</span>
+                  </div>
+                  <div
+                    class="productCounter d-flex flex-row justify-content-center align-items-center gap-2"
+                  >
+                    <button class="btnMinus">
+                      <i class="fas fa-minus"></i>
+                    </button>
+                    <p>1</p>
+                    <button class="btnPlus">
+                      <i class="fas fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br />
+            <div class="row">
+              <div
+                class="productCard card d-flex flex-row border-0 gap-3 bg-secondary"
+                style="width: 18rem"
+              >
+                <img
+                  src="./assets/img/photo1.png"
+                  class="card-img-top"
+                  alt="here is a image"
+                />
+                <div
+                  class="card-body d-flex flex-column justify-content-between w-100"
+                >
+                  <div class="product">
+                    <h5>Vintage Backbag</h5>
+                    <strong>$54.99</strong>
+                    <span>$94.99</span>
+                  </div>
+                  <div
+                    class="productCounter d-flex flex-row justify-content-center align-items-center gap-2"
+                  >
+                    <button class="btnMinus">
+                      <i class="fas fa-minus rounded-pill"></i>
+                    </button>
+                    <p>1</p>
+                    <button class="btnPlus rounded-pill">
+                      <i class="fas fa-plus rounded-pill"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+<!-- <div class="row">
+              <div
+                class="card d-flex flex-row border-0 gap-3 bg-secondary"
+                style="width: 18rem"
+              >
+                <img
+                  src="./assets/img/photo2.png"
+                  class="card-img-top"
+                  alt="here is a image"
+                />
+                <div
+                  class="card-body d-flex flex-column justify-content-between w-100"
+                >
+                  <div>
+                    <h5>Levi Shoes</h5>
+                    <strong>$74.99</strong>
+                    <span>$124.99</span>
+                  </div>
+                  <div
+                    class="productCards d-flex flex-row justify-content-center align-items-center gap-2"
+                  >
+                    <button class="btnMinus rounded-pill">
+                      <i class="fas fa-minus rounded-pill"></i>
+                    </button>
+                    <p>1</p>
+                    <button class="btnPlus rounded-pill">
+                      <i class="fas fa-plus rounded-pill"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+<!-- <br /><br /><br /><br />
+            <hr class="m-0 p-0" />
+
+            <div class="d-flex justify-content-between">
+              <p>Shipping</p>
+              <strong>$19</strong>
+            </div>
+            <hr class="m-0 p-0" />
+            <div class="d-flex justify-content-between">
+              <p>Total</p>
+              <strong></strong>
+            </div> -->

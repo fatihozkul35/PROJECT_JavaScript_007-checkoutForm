@@ -1,0 +1,10 @@
+main .container .row .productSide span {
+  text-decoration: line-through;
+}
+
+main .container .row .productSide p {
+  margin: auto 0;
+}
+.productCounter {
+  padding: 25px;
+}

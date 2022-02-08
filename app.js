@@ -3,45 +3,49 @@ const products = [
   {
     img: "./assets/img/photo1.png",
     title: "Vintage Backbag",
-    price: 54.99,
+    price: 10,
     oldPrice: 94.99,
   },
   {
     img: "./assets/img/photo2.png",
     title: "Levi Shoes",
-    price: 74.99,
+    price: 20,
     oldPrice: 124.99,
   },
+];
+
+const totalSection = [
   {
-    img: "./assets/img/photo1.png",
-    title: "Vintage Backbag",
-    price: 54.99,
-    oldPrice: 94.99,
+    name: "Shipping",
+    price: 19,
   },
   {
-    img: "./assets/img/photo2.png",
-    title: "Levi Shoes",
-    price: 74.99,
-    oldPrice: 124.99,
+    name: "Total",
+    price: 0,
   },
 ];
 
 //***************Elements Selector */
 
 const productSide = document.querySelector(".productSide");
-let total = 0;
-//****************Create News Element */
+
+//***********Global variable and function */
+
+let total = totalSection[0].price;
 function updateTotal() {
   return (val) => {
-    console.log(val + total);
     total += val;
+    console.log(total);
   };
 }
+console.log(total);
+const update = updateTotal();
 
-const test = updateTotal();
+//****************Create News Element */
 
 const row = document.createElement("div");
-row.className = "row row-cols-2 g-4";
+
+row.className = "row row-cols-1 g-4";
 let col;
 products.forEach((product) => {
   col = document.createElement("div");
@@ -55,6 +59,7 @@ products.forEach((product) => {
   img.src = product.img;
   img.alt = "here is a product image";
   img.style.width = "33%";
+  img.style.height = "25%";
 
   const cardBody = document.createElement("div");
   cardBody.className =
@@ -110,18 +115,24 @@ products.forEach((product) => {
   btnDecrease.appendChild(iconMinus);
 
   // ******** Functions
+  update(product.price);
 
   btnIncrease.addEventListener("click", () => {
     let val = +text.innerHTML;
     val++;
     text.innerHTML = val;
-    test(product.price * val);
-    //updateTotal(product.price * val);
+    totalSection[1].price = total;
+    update(product.price);
   });
 
   btnDecrease.addEventListener("click", () => {
     let val = +text.innerHTML;
-    val--;
+    if (val < 1) {
+      val;
+    } else {
+      val--;
+      update(-product.price);
+    }
     text.innerHTML = val;
   });
 
@@ -129,13 +140,31 @@ products.forEach((product) => {
   productSide.appendChild(row);
 });
 
-function counterIncrease() {
-  console.log("object");
-}
+//************Total section */ */
 
-function counterDecrease() {
-  let val = +text.innerHTML;
-  val--;
-  text.innerHTML = val;
-  console.log("object");
-}
+totalSection.forEach((e) => {
+  const line = document.createElement("hr");
+  line.style.marginTop = "3rem";
+  line.style.marginBottom = "0";
+  line.style.padding = "0";
+  line.style.border = "2px solid white";
+  line.style.color = "white";
+  row.appendChild(line);
+
+  const footerTotal = document.createElement("div");
+  footerTotal.className = "footerTotal d-flex justify-content-between";
+  row.appendChild(footerTotal);
+
+  const text1 = document.createElement("p");
+  text1.textContent = `${e.name}`;
+  const text2 = document.createElement("p");
+  text2.textContent = `$${e.price}`;
+  footerTotal.appendChild(text1);
+  footerTotal.appendChild(text2);
+});
+
+console.log(total);
+
+function counterIncrease() {} //! Sonradan forEach teki kısımları buraya al useable olabilmesi icin
+
+function counterDecrease() {} //! Sonradan forEach teki kısımları buraya al useable olabilmesi icin
